@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Files
+/packages
+/PrinterWebService/bin
+/PrinterWebService/obj
+*.user
+/Print.bat
