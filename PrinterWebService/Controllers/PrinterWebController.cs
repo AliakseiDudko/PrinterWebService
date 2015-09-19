@@ -1,13 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Drawing;
-using System.Drawing.Printing;
+﻿using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
 using System.Web.Http;
 
-using PrinterWebService.Core;
+using IBoxCorp.PrinterWebService.Core;
 
-namespace PrinterWebService.Controllers
+namespace IBoxCorp.PrinterWebService.Controllers
 {
     [RoutePrefix("api")]
     public class PrinterWebController : ApiController
@@ -23,13 +21,7 @@ namespace PrinterWebService.Controllers
         [HttpGet]
         public string[] GetAllPrinters()
         {
-            var printers = new List<string>();
-            foreach (string printer in PrinterSettings.InstalledPrinters)
-            {
-                printers.Add(printer);
-            }
-
-            return printers.ToArray();
+            return PrinterSettings.InstalledPrinters.Cast<string>().ToArray();
         }
 
         [Route("print/{fileName}")]

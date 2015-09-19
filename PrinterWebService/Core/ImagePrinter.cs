@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Diagnostics;
+using System.Drawing.Printing;
 using System.IO;
+using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
 
-namespace PrinterWebService.Core
+namespace IBoxCorp.PrinterWebService.Core
 {
     internal class ImagePrinter
     {
@@ -12,6 +12,12 @@ namespace PrinterWebService.Core
 
         public ImagePrinter(string filePath)
         {
+            if (!File.Exists(filePath))
+            {
+                var message = string.Format("File {0} does not exist.", filePath);
+                throw new ArgumentException(message, "filePath");
+            }
+
             this.filePath = filePath;
         }
 

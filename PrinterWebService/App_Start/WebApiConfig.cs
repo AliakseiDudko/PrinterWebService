@@ -1,6 +1,6 @@
 ﻿using System.Web.Http;
 
-namespace PrinterWebService
+namespace IBoxCorp.PrinterWebService
 {
     public static class WebApiConfig
     {
