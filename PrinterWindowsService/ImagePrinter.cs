@@ -4,7 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 
-namespace IBoxCorp.PrinterWebService.Core
+using IBoxCorp.PrinterWindowsService;
+
+namespace IBoxCorp.PrinterWebService
 {
     internal class ImagePrinter
     {
@@ -21,15 +23,12 @@ namespace IBoxCorp.PrinterWebService.Core
             this.filePath = filePath;
         }
 
-        [DllImport("shell32.dll", CharSet = CharSet.Unicode)]
-        private static extern int ShellExecute(IntPtr hwnd, string lpOperation, string lpFile, string lpszParameters, string lpDirectory, int nShowCmd);
-
         [DllImport("shimgvw.dll", CharSet = CharSet.Unicode)]
         private static extern int ImageView_PrintTo(IntPtr hwnd, IntPtr hInst, string lpszCmdLine, int nShowCmd);
 
         public void PrintImage()
         {
-            if (!PrinterSettings.InstalledPrinters.Cast<string>().ToArray().Contains(AppConfig.PrinterName))
+            if (!PrinterManager.PrinterExists)
             {
                 var message = string.Format(@"Printer ""{0}"" was not found.", AppConfig.PrinterName);
                 throw new InvalidOperationException(message);
@@ -37,15 +36,6 @@ namespace IBoxCorp.PrinterWebService.Core
 
             var commandLine = string.Format(@"/pt ""{0}"" ""{1}""", filePath, AppConfig.PrinterName);
             ImageView_PrintTo(IntPtr.Zero, IntPtr.Zero, commandLine, 0);
-
-            //var shellExecuteCommandLine = string.Format(@"shimgvw.dll,ImageView_PrintTo {0}", commandLine);
-            //ShellExecute(
-            //    IntPtr.Zero,
-            //    string.Empty,
-            //    "rundll32.exe",
-            //    shellExecuteCommandLine,
-            //    string.Empty,
-            //    0);
 
             return;
         }

@@ -78,10 +78,16 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\PrinterWindowsService\AppConfig.cs">
+      <Link>Core\AppConfig.cs</Link>
+    </Compile>
+    <Compile Include="..\PrinterWindowsService\Controllers\PrinterWebController.cs">
+      <Link>Controllers\PrinterWebController.cs</Link>
+    </Compile>
+    <Compile Include="..\PrinterWindowsService\ImagePrinter.cs">
+      <Link>Core\ImagePrinter.cs</Link>
+    </Compile>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\PrinterWebController.cs" />
-    <Compile Include="Core\AppConfig.cs" />
-    <Compile Include="Core\ImagePrinter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

@@ -3,7 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Web.Http;
 
-using IBoxCorp.PrinterWebService.Core;
+using IBoxCorp.PrinterWebService;
 
 namespace IBoxCorp.PrinterWebService.Controllers
 {
@@ -15,13 +15,6 @@ namespace IBoxCorp.PrinterWebService.Controllers
         public bool HealthCheck()
         {
             return true;
-        }
-
-        [Route("printers")]
-        [HttpGet]
-        public string[] GetAllPrinters()
-        {
-            return PrinterSettings.InstalledPrinters.Cast<string>().ToArray();
         }
 
         [Route("print/{fileName}")]

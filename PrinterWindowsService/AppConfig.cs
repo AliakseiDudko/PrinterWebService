@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Configuration;
 
-namespace IBoxCorp.PrinterWebService.Core
+namespace IBoxCorp.PrinterWebService
 {
     internal static class AppConfig
     {
