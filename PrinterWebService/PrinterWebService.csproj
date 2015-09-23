@@ -84,8 +84,14 @@
     <Compile Include="..\PrinterWindowsService\Controllers\PrinterWebController.cs">
       <Link>Controllers\PrinterWebController.cs</Link>
     </Compile>
+    <Compile Include="..\PrinterWindowsService\ImageConverter.cs">
+      <Link>Core\ImageConverter.cs</Link>
+    </Compile>
     <Compile Include="..\PrinterWindowsService\ImagePrinter.cs">
       <Link>Core\ImagePrinter.cs</Link>
+    </Compile>
+    <Compile Include="..\PrinterWindowsService\PrinterManager.cs">
+      <Link>Core\PrinterManager.cs</Link>
     </Compile>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Global.asax.cs">

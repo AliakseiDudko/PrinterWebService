@@ -1,9 +1,7 @@
 ﻿using System.Drawing.Printing;
 using System.Linq;
 
-using IBoxCorp.PrinterWebService;
-
-namespace IBoxCorp.PrinterWindowsService
+namespace IBoxCorp.PrinterService
 {
     internal static class PrinterManager
     {

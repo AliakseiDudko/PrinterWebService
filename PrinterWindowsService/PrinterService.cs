@@ -2,7 +2,7 @@
 using System.Web.Http;
 using System.Web.Http.SelfHost;
 
-using IBoxCorp.PrinterWebService;
+using IBoxCorp.PrinterService;
 
 namespace IBoxCorp.PrinterWindowsService
 {
