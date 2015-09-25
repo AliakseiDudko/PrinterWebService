@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Drawing.Printing;
 using System.IO;
-using System.Linq;
 using System.Runtime.InteropServices;
 
 namespace IBoxCorp.PrinterService

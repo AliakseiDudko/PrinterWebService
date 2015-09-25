@@ -1,4 +1,4 @@
-﻿namespace IBoxCorp.PrinterWindowsService
+﻿namespace IBoxCorp.PrinterService
 {
     partial class PrinterService
     {

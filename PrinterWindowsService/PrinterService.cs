@@ -4,7 +4,7 @@ using System.Web.Http.SelfHost;
 
 using IBoxCorp.PrinterService;
 
-namespace IBoxCorp.PrinterWindowsService
+namespace IBoxCorp.PrinterService
 {
     public partial class PrinterService : ServiceBase
     {

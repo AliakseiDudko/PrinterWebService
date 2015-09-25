@@ -1,6 +1,6 @@
 ﻿using System.ServiceProcess;
 
-namespace IBoxCorp.PrinterWindowsService
+namespace IBoxCorp.PrinterService
 {
     static class Program
     {

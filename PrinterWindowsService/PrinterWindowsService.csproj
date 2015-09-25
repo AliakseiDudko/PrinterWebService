@@ -7,7 +7,7 @@
     <ProjectGuid>{29C3DFE0-E722-4765-A457-BDC996A5041D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IBoxCorp.PrinterWindowsService</RootNamespace>
+    <RootNamespace>IBoxCorp.PrinterService</RootNamespace>
     <AssemblyName>PrinterWindowsService</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -86,8 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppConfig.cs" />
-    <Compile Include="Controllers\PrinterWebController.cs" />
-    <Compile Include="ImageConverter.cs" />
+    <Compile Include="Controllers\PrinterController.cs" />
     <Compile Include="ImagePrinter.cs" />
     <Compile Include="PrinterManager.cs" />
     <Compile Include="PrinterService.cs">
@@ -100,7 +99,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="install.bat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
