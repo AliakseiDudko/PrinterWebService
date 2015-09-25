@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrinterWebService", "PrinterWebService\PrinterWebService.csproj", "{F72A677E-06B7-4442-994C-1B6733A8C982}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrinterWindowsService", "PrinterWindowsService\PrinterWindowsService.csproj", "{29C3DFE0-E722-4765-A457-BDC996A5041D}"
 EndProject
 Global
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F72A677E-06B7-4442-994C-1B6733A8C982}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F72A677E-06B7-4442-994C-1B6733A8C982}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F72A677E-06B7-4442-994C-1B6733A8C982}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F72A677E-06B7-4442-994C-1B6733A8C982}.Release|Any CPU.Build.0 = Release|Any CPU
 		{29C3DFE0-E722-4765-A457-BDC996A5041D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{29C3DFE0-E722-4765-A457-BDC996A5041D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29C3DFE0-E722-4765-A457-BDC996A5041D}.Release|Any CPU.ActiveCfg = Release|Any CPU
